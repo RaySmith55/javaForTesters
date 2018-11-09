@@ -12,4 +12,25 @@ public class MyFirstTest {
 
         assertEquals("2+2=4", 4, answer);
     }
+
+    @Test
+    public void canMinusTwoFromTwo(){
+        int answer = 2 - 2;
+
+        assertEquals("2-2=0", 0, answer);
+    }
+
+    @Test
+    public void canDivideFourByTwo(){
+        int answer = 4 / 2;
+
+        assertEquals("4/2=2", 2, answer);
+    }
+
+    @Test
+    public void canMultiplyTwoByTwo(){
+        int answer = 2 * 2;
+
+        assertEquals("2*2=4", 4, answer);
+    }
 }
