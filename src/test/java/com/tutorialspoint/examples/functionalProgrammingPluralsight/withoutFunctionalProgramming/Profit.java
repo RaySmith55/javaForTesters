@@ -1,4 +1,4 @@
-package com.tutorialspoint.examples.FunctionalProgrammingPluralsight;
+package com.tutorialspoint.examples.functionalProgrammingPluralsight.withoutFunctionalProgramming;
 
 public class Profit implements QuantityOfInterest {
 

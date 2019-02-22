@@ -1,4 +1,4 @@
-package com.tutorialspoint.examples.FunctionalProgrammingPluralsight;
+package com.tutorialspoint.examples.functionalProgrammingPluralsight;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -15,6 +15,6 @@ public class MinimumLambdaExamples {
         BiFunction<String, Integer, Boolean> exceedsMaxLength = (s, maxLength) -> {
             int actualLength = s.length();
             return actualLength > maxLength;
-        }
+        };
     }
 }
