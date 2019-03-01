@@ -8,24 +8,24 @@ public class Profit {
 
     public static void main(String[] args) {
 
-        final FunctionOverTime sales =
-                FunctionOverTime.monthByMonth(EXPECTED_SALES_JAN_TO_DEC);
+        final Sales sales = new Sales(
+                FunctionOverTime.monthByMonth(EXPECTED_SALES_JAN_TO_DEC));
 
-        final FunctionOverTime fixedCosts =
-                FunctionOverTime.constant(15.0);
+        final FixedCosts fixedCosts = new FixedCosts(
+                FunctionOverTime.constant(15.0));
 
-        final FunctionOverTime incrementalCosts =
-                FunctionOverTime.line(5.1, 0.15);
+        final IncrementalCosts incrementalCosts = new IncrementalCosts(
+                FunctionOverTime.line(5.1, 0.15));
 
-        final FunctionOverTime profit =
-                FunctionOverTime.combinationOfThree(
-                        sales, incrementalCosts, fixedCosts,
-                        (s, ic, fc) -> s - ic - fc
-                );
+        final ProfitCalculation profitCalculation =
+                new ProfitCalculation(
+                        sales,
+                        incrementalCosts,
+                        fixedCosts);
 
         Double totalProfit = 0.0;
         for(int time = 1; time <= 12; time++) {
-            totalProfit += profit.valueAt(time);
+            totalProfit += profitCalculation.valueAt(time);
         }
 
         System.out.println("Total profits for the year: " + totalProfit);
