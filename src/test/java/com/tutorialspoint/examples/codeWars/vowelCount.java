@@ -12,9 +12,14 @@ public class vowelCount {
 
     Pattern pattern = Pattern.compile(regex);
 
-    String[] letters = str.split("");
+    String[] letters;
+    try {
+      letters = str.split("");
+    } catch (NullPointerException e) {
+      return 0;
+    }
 
-    for(int i = 0; i < letters.length; i++) {
+    for (int i = 0; i < letters.length; i++) {
       Matcher matcher = pattern.matcher(letters[i]);
       boolean valid = matcher.matches();
       if (valid == true) {

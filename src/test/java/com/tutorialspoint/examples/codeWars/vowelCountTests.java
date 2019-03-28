@@ -9,6 +9,6 @@ public class vowelCountTests {
   public void testCase1() {
     assertEquals("Nope!", 5, vowelCount.getCount("abracadabra"));
 
-    assertEquals("Nope!", 0, vowelCount.getCount("null"));
+    assertEquals("Nope!", 0, vowelCount.getCount(null));
   }
 }
