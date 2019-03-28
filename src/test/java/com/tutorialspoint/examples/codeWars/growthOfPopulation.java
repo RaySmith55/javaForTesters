@@ -3,7 +3,7 @@ package com.tutorialspoint.examples.codeWars;
 public class growthOfPopulation {
 
     public static int nbYear(int p0, double percent, int aug, int p) {
-        int years = 0;
+        int years;
 
         for (years = 1; p0 < p; years++) {
             p0 = (int) (p0 * (1 + (percent / 100)));
